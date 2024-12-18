@@ -102,8 +102,8 @@ export default function Home() {
 
       {gameState === 'ready' && (
         <div className="text-center mt-12">
-          <p className="lg:text-6xl text-4xl">Trivia Frontend</p>
-          <p className="lg:text-2xl text-ms">HTML, CSS, Javascript y REACT</p>
+          <p className="lg:text-6xl text-4xl">Trivia de ciencias</p>
+          <p className="lg:text-2xl text-ms">Cuanto sabes de ciencia?</p>
           <button type="button" onClick={randomQuestions}
             className="dark:bg-red-800 bg-red-400 mx-auto w-32 p-4 rounded-xl text-2xl mb-4 mt-32"
           >Start</button>
