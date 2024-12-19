@@ -26,12 +26,12 @@ export default function Home() {
 
   const randomQuestions = () => {
     let questionList = Array.from({ length: 88 }, (_, i) => i)
-    for (let i = questionList.length - 1; i > -1; i--) {
+    /*for (let i = questionList.length - 1; i > -1; i--) {
       let j = Math.floor(Math.random() * (i + 1))
       let beforeJ = questionList[i]
       questionList[i] = questionList[j]
       questionList[j] = beforeJ
-    }
+    }*/
     setConfetti(false)
     setScore(0)
     setTrivia(0)
@@ -47,7 +47,7 @@ export default function Home() {
     } else {
       gameOver('gameover')
     }
-    console.log('TRIVIA:::', trivia)
+    console.log('TRIVIA:::', trivia, 'Index pregunta:', orderQuestions)
   }
 
   const nextQuestion = () => {
@@ -57,8 +57,8 @@ export default function Home() {
       setGameState('fin')
     } else {
       setGameState('runing')
-
     }
+    if (time <= 0) gameOver('timeover')
   }
 
   const gameOver = (game) => {
@@ -96,7 +96,7 @@ export default function Home() {
           <p className="text-xl mb-2"><b>La respuesta correcta era:</b></p>
           <p className="text-ms mb-12">{question[orderQuestions[trivia]][(question[orderQuestions[trivia]][5])]}</p>
           <p className="text-xl mb-8">Tu Puntaje fue : {score}</p>
-          <button type="button" onClick={nextQuestion} className="bg-stone-500 rounded-2xl px-4 py-2 shadow-neutral-900 shadow-xl">JUGAR OTRA VEZ</button>
+          <button type="button" onClick={nextQuestion} className="bg-stone-500 rounded-2xl px-4 py-2 shadow-neutral-900 shadow-xl">PRÓXIMA PREGUNTA</button>
         </div>
       )}
 

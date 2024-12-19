@@ -47,7 +47,7 @@ export const triviaAnswer = [
     ["¿Qué tipo de roca se forma por enfriamiento de lava?", "Metamórfica", "Ígnea", "Sedimentaria", "Volcánica", 2],
     ["¿Qué animal pone huevos pero es mamífero?", "Ornitorrinco", "Pingüino", "Murciélago", "Canguro", 1],
     ["¿Qué unidad se usa para medir la frecuencia?", "Hertz", "Pascal", "Newton", "Voltio", 1],
-    ["¿Qué molécula transporta el oxígeno en la sangre?", "Insulina", "Hemoglobina", "Glucosa", "ADN", 2]
+    ["¿Qué molécula transporta el oxígeno en la sangre?", "Insulina", "Hemoglobina", "Glucosa", "ADN", 2],
     ["¿Qué partícula subatómica tiene carga negativa?", "Protón", "Neutrón", "Electrón", "Quark", 3],
     ["¿Cuál es el planeta más grande del sistema solar?", "Tierra", "Júpiter", "Saturno", "Urano", 2],
     ["¿Qué científico formuló las leyes del movimiento?", "Albert Einstein", "Isaac Newton", "Galileo Galilei", "Marie Curie", 2],
