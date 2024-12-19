@@ -90,10 +90,10 @@ export default function Home() {
 
       {gameState === 'gameover' && (
         <div className="dark:bg-red-700 bg-red-300 text-center mt-8 lg:w-2/3 w-full px-4 py-8 rounded-3xl mx-auto border-solid border-2 dark:border-neutral-100 border-neutral-900">
-          <p className="text-4xl mb-4"><b>¡Fallaste!</b></p>
+          <p className="text-4xl mb-8"><b>¡Fallaste!</b></p>
           <p className="text-xl mb-4">"{question[orderQuestions[trivia]][0]}"</p>
           <p className="text-xl mb-2"><b>La respuesta correcta era:</b></p>
-          <p className="text-ms mb-12">{question[orderQuestions[trivia]][(question[orderQuestions[trivia]][5])]}</p>
+          <p className="text-lg mb-12">{question[orderQuestions[trivia]][(question[orderQuestions[trivia]][5])]}</p>
           <p className="text-xl mb-8">Tu Puntaje fue : {score}</p>
           <button type="button" onClick={nextQuestion} className="bg-stone-500 rounded-2xl px-4 py-2 shadow-neutral-900 shadow-xl">PRÓXIMA PREGUNTA</button>
         </div>
@@ -101,10 +101,14 @@ export default function Home() {
 
       {gameState === 'timeover' && (
         <div className="dark:bg-red-700 bg-red-300 text-center mt-8 lg:w-2/3 w-full px-4 py-8 rounded-3xl mx-auto border-solid border-2 dark:border-neutral-100 border-neutral-900">
-          <p className="text-4xl mb-4"><b>'Se acabó el tiempo'</b></p>
-          <p className="text-2xl mb-8">Tu Puntaje fue : {score}</p>
-          <p className="text-2xl mb-8">{score}</p>
-          <button type="button" onClick={randomQuestions} className="bg-stone-500 rounded-2xl px-4 py-2 shadow-neutral-900 shadow-xl">JUGAR OTRA VEZ</button>
+          <p className="text-4xl mb-16"><b>'Se acabó el tiempo'</b></p>
+          <p className="text-4xl mb-8">Tu Puntaje fue :</p>
+          <p className="text-4xl mb-16">{score}</p>
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=https://trivia-ciencia.vercel.app&quote=${encodeURIComponent(`¡Mi puntaje fue ${score}! ¿Puedes superarme?`)}`}
+            target="blank"
+            className="dark:bg-sky-800 bg-sky-300 rounded-2xl px-4 py-2 dark:shadow-neutral-700 shadow-neutral-500 shadow-xl mb-8">COMPARTIR</a>
+            <p className="mt-2 mb-16">Post de Facebook</p>
+          <button type="button" onClick={randomQuestions} className="dark:bg-stone-500 bg-stone-300 rounded-2xl px-4 py-2 shadow-neutral-900 shadow-xl">JUGAR OTRA VEZ</button>
         </div>
       )}
 
