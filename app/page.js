@@ -26,12 +26,12 @@ export default function Home() {
 
   const randomQuestions = () => {
     let questionList = Array.from({ length: 88 }, (_, i) => i)
-    /*for (let i = questionList.length - 1; i > -1; i--) {
+    for (let i = questionList.length - 1; i > -1; i--) {
       let j = Math.floor(Math.random() * (i + 1))
       let beforeJ = questionList[i]
       questionList[i] = questionList[j]
       questionList[j] = beforeJ
-    }*/
+    }
     setConfetti(false)
     setScore(0)
     setTrivia(0)
@@ -47,7 +47,6 @@ export default function Home() {
     } else {
       gameOver('gameover')
     }
-    console.log('TRIVIA:::', trivia, 'Index pregunta:', orderQuestions)
   }
 
   const nextQuestion = () => {
