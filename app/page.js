@@ -25,7 +25,7 @@ export default function Home() {
   }, [time]);
 
   const randomQuestions = () => {
-    let questionList = Array.from({ length: 55 }, (_, i) => i)
+    let questionList = Array.from({ length: 88 }, (_, i) => i)
     for (let i = questionList.length - 1; i > -1; i--) {
       let j = Math.floor(Math.random() * (i + 1))
       let beforeJ = questionList[i]
