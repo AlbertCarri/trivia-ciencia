@@ -107,7 +107,7 @@ export default function Home() {
           <a href={`https://www.facebook.com/sharer/sharer.php?u=https://trivia-ciencia.vercel.app&quote=${encodeURIComponent(`¡Mi puntaje fue ${score}! ¿Puedes superarme?`)}`}
             target="blank"
             className="dark:bg-sky-800 bg-sky-300 rounded-2xl px-4 py-2 dark:shadow-neutral-700 shadow-neutral-500 shadow-xl mb-8">COMPARTIR</a>
-            <p className="mt-2 mb-16">Post de Facebook</p>
+          <p className="mt-2 mb-16">Post de Facebook</p>
           <button type="button" onClick={randomQuestions} className="dark:bg-stone-500 bg-stone-300 rounded-2xl px-4 py-2 shadow-neutral-900 shadow-xl">JUGAR OTRA VEZ</button>
         </div>
       )}
@@ -115,7 +115,7 @@ export default function Home() {
       {gameState === 'ready' && (
         <div className="text-center mt-12">
           <p className="lg:text-6xl text-4xl">Trivia de ciencias</p>
-          <p className="lg:text-2xl text-ms">Cuanto sabes de ciencia?</p>
+          <p className="lg:text-2xl text-ms">Cuánto sabes de ciencia?</p>
           <button type="button" onClick={randomQuestions}
             className="dark:bg-red-800 bg-red-400 mx-auto w-32 p-4 rounded-xl text-2xl mb-4 mt-32"
           >Start</button>
